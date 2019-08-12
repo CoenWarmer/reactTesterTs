@@ -5,9 +5,19 @@ This is a React Native app that allows the user to enter a string of numbers and
 ## Technologies
 
 - React Native 0.60, using hooks
+- React Native Vector Icons
 - Styled Components 4
 - TypeScript 3.6
 - Jest
+
+## Getting started
+
+This app is built with `react-native-cli`, not Expo.
+
+1. Install React Native CLI by following instructions here: https://facebook.github.io/react-native/docs/getting-started
+2. Install dependencies (`yarn`)
+3. Start Metro bundler (`yarn start`)
+4. Run `react-native run-ios` or `react-native run-android`.
 
 ## Hooks
 
