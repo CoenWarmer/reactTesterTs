@@ -48,7 +48,7 @@ const Step2 = ({
       <ButtonSubmit
         label="Guess!"
         disabled={!valid || !isCurrentStep}
-        onPress={() => dispatch({ type: 'guess' })}
+        onPress={() => dispatch({ type: 'guessMissingNumber' })}
       />
     </Content>
     <Footer>

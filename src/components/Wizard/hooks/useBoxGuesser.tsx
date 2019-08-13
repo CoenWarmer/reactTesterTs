@@ -2,8 +2,18 @@ import { useReducer } from 'react';
 import { validateBoxSize, validateBoxElements } from '../helpers/validators';
 import { guessMissingNumber } from '../helpers/guessMissingNumber';
 
+type ActionType =
+  | 'reset'
+  | 'resetBoxElements'
+  | 'enterBoxSize'
+  | 'enterBoxElements'
+  | 'increaseStepNumber'
+  | 'decreaseStepNumber'
+  | 'setStepNumber'
+  | 'guessMissingNumber';
+
 export interface Action {
-  type: string;
+  type: ActionType;
   value?: string;
 }
 
@@ -102,7 +112,7 @@ function reducer(state: State, action: Action) {
         ...state,
         currentStep: action.value,
       };
-    case 'guess':
+    case 'guessMissingNumber':
       const guess = guessMissingNumber(state.boxElements);
       return {
         ...state,
